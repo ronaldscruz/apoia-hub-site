@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# System Files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Node modules (se no futuro adicionar npm/node)
+node_modules/
+npm-debug.log*
+
+# Environment variables (se no futuro usar)
+.env
+.env.local
+.env.*.local
+
