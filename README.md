@@ -1,3 +1,5 @@
+<img width="870" height="360" alt="logo-wide" src="https://github.com/user-attachments/assets/75f0297e-f95e-4909-be6b-911706a72e7d" />
+
 # 🤝 Apoia Hub
 
 **Conectando quem apoia com quem transforma**
