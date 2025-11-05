@@ -10,26 +10,37 @@
     <meta name="author" content="Apoia Hub">
     <title>Apoia Hub - Conectando quem apoia com quem transforma</title>
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Apoia Hub</h1>
-        <p><strong>Conectando quem apoia com quem transforma</strong></p>
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo-link">
+                <img src="assets/img/logo-transparent.png" alt="Apoia Hub - Conectando quem apoia com quem transforma" class="header-logo">
+            </a>
 
-        <nav>
-            <ul>
-                <li><a href="index.html" title="Página Inicial">Início</a></li>
-                <li><a href="projetos.html" title="Conheça nossos projetos">Projetos</a></li>
-                <li><a href="cadastro.html" title="Cadastre-se como voluntário ou doador">Cadastro</a></li>
-                <li><a href="#contato" title="Entre em contato conosco">Contato</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul>
+                    <li><a href="index.html" title="Página Inicial">Início</a></li>
+                    <li><a href="projetos.html" title="Conheça nossos projetos">Projetos</a></li>
+                    <li><a href="cadastro.html" title="Cadastre-se como voluntário ou doador">Cadastro</a></li>
+                    <li><a href="#contato" title="Entre em contato conosco">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <!-- Seção de Apresentação -->
         <section id="apresentacao">
+            <div class="container">
             <h2>Bem-vindo à Apoia Hub</h2>
             <p>
                 Somos uma ONG digital que conecta pessoas, empresas e projetos sociais,
@@ -42,10 +53,12 @@
                     alt="Grupo de voluntários trabalhando juntos em projeto social" width="800" height="400">
                 <figcaption>Nossa comunidade fazendo a diferença</figcaption>
             </figure>
+            </div>
         </section>
 
         <!-- Seção Quem Somos -->
         <section id="quem-somos">
+            <div class="container">
             <h2>Quem Somos</h2>
 
             <article>
@@ -74,149 +87,223 @@
                     <li><strong>Sustentabilidade:</strong> Pensamos no impacto a longo prazo</li>
                 </ul>
             </article>
+            </div>
         </section>
 
         <!-- Seção de Impacto -->
         <section id="impacto">
+            <div class="container">
             <h2>Nosso Impacto</h2>
             <p>Juntos, estamos transformando realidades e construindo um Brasil mais solidário.</p>
 
-            <article>
-                <h3>Números que Fazem a Diferença</h3>
-                <dl>
-                    <dt>Voluntários Cadastrados</dt>
-                    <dd>+5.000 pessoas engajadas</dd>
+            <div class="grid">
+                <div class="card col-3 text-center">
+                    <h3 class="impact-number">+5.000</h3>
+                    <p class="impact-text"><strong>Voluntários Cadastrados</strong></p>
+                    <p class="impact-subtext">pessoas engajadas</p>
+                </div>
 
-                    <dt>Projetos Ativos</dt>
-                    <dd>127 projetos em andamento</dd>
+                <div class="card col-3 text-center">
+                    <h3 class="impact-number secondary">127</h3>
+                    <p class="impact-text"><strong>Projetos Ativos</strong></p>
+                    <p class="impact-subtext">em andamento</p>
+                </div>
 
-                    <dt>Doações Realizadas</dt>
-                    <dd>R$ 2,3 milhões arrecadados</dd>
+                <div class="card col-3 text-center">
+                    <h3 class="impact-number accent">R$ 2,3M</h3>
+                    <p class="impact-text"><strong>Doações Realizadas</strong></p>
+                    <p class="impact-subtext">arrecadados</p>
+                </div>
 
-                    <dt>Vidas Impactadas</dt>
-                    <dd>+50.000 beneficiados</dd>
-                </dl>
-            </article>
+                <div class="card col-3 text-center">
+                    <h3 class="impact-number">+50.000</h3>
+                    <p class="impact-text"><strong>Vidas Impactadas</strong></p>
+                    <p class="impact-subtext">beneficiados</p>
+                </div>
+            </div>
+            </div>
         </section>
 
         <!-- Galeria de Imagens -->
         <section id="galeria">
+            <div class="container">
             <h2>Nossa Jornada em Imagens</h2>
             <p>Momentos que marcam nossa história de transformação social.</p>
 
-            <figure>
-                <img src="assets/img/projeto-educacao.jpg" alt="Crianças estudando em projeto educacional da Apoia Hub"
-                    width="600" height="400">
-                <figcaption>Projeto Educação para Todos</figcaption>
-            </figure>
+            <div class="grid">
+                <div class="card col-6">
+                    <div class="card-body">
+                        <img src="assets/img/projeto-educacao.jpg" alt="Crianças estudando em projeto educacional da Apoia Hub"
+                            width="600" height="400">
+                        <h3>Projeto Educação para Todos</h3>
+                        <p>Oferecemos reforço escolar e aulas de informática para crianças de comunidades carentes.</p>
+                    </div>
+                </div>
 
-            <figure>
-                <img src="assets/img/projeto-alimentacao.jpg" alt="Distribuição de alimentos para famílias carentes"
-                    width="600" height="400">
-                <figcaption>Campanha Alimente uma Vida</figcaption>
-            </figure>
+                <div class="card col-6">
+                    <div class="card-body">
+                        <img src="assets/img/projeto-alimentacao.jpg" alt="Distribuição de alimentos para famílias carentes"
+                            width="600" height="400">
+                        <h3>Campanha Alimente uma Vida</h3>
+                        <p>Combatemos a fome através da distribuição de cestas básicas e refeições comunitárias.</p>
+                    </div>
+                </div>
 
-            <figure>
-                <img src="assets/img/projeto-meio-ambiente.jpg"
-                    alt="Voluntários plantando árvores em área de reflorestamento" width="600" height="400">
-                <figcaption>Programa Verde Vivo</figcaption>
-            </figure>
+                <div class="card col-6">
+                    <div class="card-body">
+                        <img src="assets/img/projeto-meio-ambiente.jpg"
+                            alt="Voluntários plantando árvores em área de reflorestamento" width="600" height="400">
+                        <h3>Programa Verde Vivo</h3>
+                        <p>Promovemos o reflorestamento de áreas urbanas degradadas com árvores nativas.</p>
+                    </div>
+                </div>
 
-            <figure>
-                <img src="assets/img/projeto-capacitacao.jpg" alt="Jovens participando de curso profissionalizante"
-                    width="600" height="400">
-                <figcaption>Capacitação Profissional Jovem</figcaption>
-            </figure>
+                <div class="card col-6">
+                    <div class="card-body">
+                        <img src="assets/img/projeto-capacitacao.jpg" alt="Jovens participando de curso profissionalizante"
+                            width="600" height="400">
+                        <h3>Capacitação Profissional Jovem</h3>
+                        <p>Oferecemos cursos profissionalizantes gratuitos para jovens de baixa renda.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
         </section>
 
         <!-- Como Ajudar -->
         <section id="como-ajudar">
+            <div class="container">
             <h2>Como Você Pode Ajudar</h2>
 
-            <article>
-                <h3>Seja Voluntário</h3>
-                <p>
-                    Doe seu tempo e talentos para transformar vidas. Temos oportunidades
-                    presenciais e remotas para diversos perfis.
-                </p>
-                <p><a href="cadastro.html" title="Cadastre-se como voluntário">Quero ser voluntário →</a></p>
-            </article>
+            <div class="grid">
+                <article class="card col-4">
+                    <div class="card-header">
+                        <h3>Seja Voluntário</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Doe seu tempo e talentos para transformar vidas. Temos oportunidades
+                            presenciais e remotas para diversos perfis.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="cadastro.html" class="btn btn-primary" title="Cadastre-se como voluntário">Quero ser voluntário</a>
+                    </div>
+                </article>
 
-            <article>
-                <h3>Faça uma Doação</h3>
-                <p>
-                    Contribua financeiramente e ajude projetos sociais a continuarem
-                    transformando realidades. Cada valor faz diferença!
-                </p>
-                <p><a href="projetos.html" title="Veja projetos que precisam de doação">Conhecer projetos →</a></p>
-            </article>
+                <article class="card col-4">
+                    <div class="card-header">
+                        <h3>Faça uma Doação</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Contribua financeiramente e ajude projetos sociais a continuarem
+                            transformando realidades. Cada valor faz diferença!
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="projetos.html" class="btn btn-secondary" title="Veja projetos que precisam de doação">Conhecer projetos</a>
+                    </div>
+                </article>
 
-            <article>
-                <h3>Divulgue Nossa Causa</h3>
-                <p>
-                    Compartilhe nossos projetos nas redes sociais e ajude a ampliar
-                    nosso alcance. Quanto mais pessoas souberem, maior nosso impacto!
-                </p>
-            </article>
+                <article class="card col-4">
+                    <div class="card-header">
+                        <h3>Divulgue Nossa Causa</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Compartilhe nossos projetos nas redes sociais e ajude a ampliar
+                            nosso alcance. Quanto mais pessoas souberem, maior nosso impacto!
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#contato" class="btn btn-outline">Compartilhar</a>
+                    </div>
+                </article>
+            </div>
+            </div>
         </section>
 
         <!-- Depoimentos -->
         <section id="depoimentos">
+            <div class="container">
             <h2>Depoimentos</h2>
             <p>Histórias de quem já faz parte da nossa comunidade solidária.</p>
 
-            <blockquote>
-                <p>
-                    "Através da Apoia Hub, encontrei projetos que realmente fazem a diferença.
-                    É gratificante saber que estou ajudando a construir um mundo melhor."
-                </p>
-                <footer>
-                    — <cite>Maria Silva, Voluntária desde 2023</cite>
-                </footer>
-            </blockquote>
+            <div class="grid">
+                <div class="card col-4">
+                    <div class="card-body">
+                        <blockquote>
+                            <p>
+                                "Através da Apoia Hub, encontrei projetos que realmente fazem a diferença.
+                                É gratificante saber que estou ajudando a construir um mundo melhor."
+                            </p>
+                            <footer>
+                                — <cite>Maria Silva, Voluntária desde 2023</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
 
-            <blockquote>
-                <p>
-                    "A plataforma facilitou muito nossa captação de recursos. Conseguimos
-                    conectar com doadores que acreditam na nossa causa."
-                </p>
-                <footer>
-                    — <cite>João Santos, Coordenador de Projeto Social</cite>
-                </footer>
-            </blockquote>
+                <div class="card col-4">
+                    <div class="card-body">
+                        <blockquote>
+                            <p>
+                                "A plataforma facilitou muito nossa captação de recursos. Conseguimos
+                                conectar com doadores que acreditam na nossa causa."
+                            </p>
+                            <footer>
+                                — <cite>João Santos, Coordenador de Projeto Social</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
 
-            <blockquote>
-                <p>
-                    "Doar nunca foi tão fácil e transparente. Acompanho o impacto das
-                    minhas contribuições e isso me motiva a continuar ajudando."
-                </p>
-                <footer>
-                    — <cite>Ana Paula Costa, Doadora Regular</cite>
-                </footer>
-            </blockquote>
+                <div class="card col-4">
+                    <div class="card-body">
+                        <blockquote>
+                            <p>
+                                "Doar nunca foi tão fácil e transparente. Acompanho o impacto das
+                                minhas contribuições e isso me motiva a continuar ajudando."
+                            </p>
+                            <footer>
+                                — <cite>Ana Paula Costa, Doadora Regular</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            </div>
         </section>
 
         <!-- Parceiros -->
         <section id="parceiros">
+            <div class="container">
             <h2>Nossos Parceiros</h2>
             <p>Empresas e organizações que acreditam em nossa missão.</p>
 
-            <figure>
-                <img src="assets/img/parceiro-1.jpg" alt="Logo do parceiro Empresa Solidária" width="200" height="100">
-            </figure>
+            <div class="grid">
+                <div class="col-4 flex flex-col items-center justify-center">
+                    <img src="assets/img/parceiro-1.jpg" alt="Logo do parceiro Empresa Solidária" class="partner-img">
+                    <p class="partner-name"><strong>Empresa Solidária</strong></p>
+                </div>
 
-            <figure>
-                <img src="assets/img/parceiro-2.webp" alt="Logo do parceiro Instituto Transformar" width="200"
-                    height="100">
-            </figure>
+                <div class="col-4 flex flex-col items-center justify-center">
+                    <img src="assets/img/parceiro-2.webp" alt="Logo do parceiro Instituto Transformar" class="partner-img">
+                    <p class="partner-name"><strong>Instituto Transformar</strong></p>
+                </div>
 
-            <figure>
-                <img src="assets/img/parceiro-3.jpg" alt="Logo do parceiro Fundação Esperança" width="200" height="200">
-            </figure>
+                <div class="col-4 flex flex-col items-center justify-center">
+                    <img src="assets/img/parceiro-3.jpg" alt="Logo do parceiro Fundação Esperança" class="partner-img">
+                    <p class="partner-name"><strong>Fundação Esperança</strong></p>
+                </div>
+            </div>
+            </div>
         </section>
 
         <!-- Contato -->
         <section id="contato">
+            <div class="container">
             <h2>Entre em Contato</h2>
             <p>Estamos aqui para tirar suas dúvidas e te ajudar a fazer a diferença!</p>
 
@@ -290,10 +377,12 @@
                 Sábado: 9h às 13h<br>
                 <em>Atendimento online disponível 24h por e-mail</em>
             </p>
+            </div>
         </section>
     </main>
 
     <footer>
+        <div class="container">
         <p>&copy; 2025 Apoia Hub - Todos os direitos reservados.</p>
         <p>CNPJ: 12.345.678/0001-90</p>
         <p>
@@ -309,6 +398,7 @@
                 <li><a href="#contato" title="Entre em contato">Contato</a></li>
             </ul>
         </nav>
+        </div>
     </footer>
 </body>
 

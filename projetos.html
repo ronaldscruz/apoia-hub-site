@@ -10,381 +10,422 @@
     <meta name="author" content="Apoia Hub">
     <title>Projetos Sociais - Apoia Hub</title>
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Apoia Hub</h1>
-        <p><strong>Conectando quem apoia com quem transforma</strong></p>
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo-link">
+                <img src="assets/img/logo-transparent.png" alt="Apoia Hub - Conectando quem apoia com quem transforma" class="header-logo">
+            </a>
 
-        <nav>
-            <ul>
-                <li><a href="index.html" title="Página Inicial">Início</a></li>
-                <li><a href="projetos.html" title="Conheça nossos projetos">Projetos</a></li>
-                <li><a href="cadastro.html" title="Cadastre-se como voluntário ou doador">Cadastro</a></li>
-                <li><a href="index.html#contato" title="Entre em contato conosco">Contato</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul>
+                    <li><a href="index.html" title="Página Inicial">Início</a></li>
+                    <li><a href="projetos.html" title="Conheça nossos projetos">Projetos</a></li>
+                    <li><a href="cadastro.html" title="Cadastre-se como voluntário ou doador">Cadastro</a></li>
+                    <li><a href="index.html#contato" title="Entre em contato conosco">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <!-- Introdução aos Projetos -->
         <section id="intro-projetos">
+            <div class="container">
             <h2>Nossos Projetos</h2>
             <p>
                 Conheça as iniciativas que estão transformando vidas em todo o Brasil.
                 Cada projeto foi cuidadosamente selecionado para garantir impacto real
                 e transparência total. Você pode contribuir como voluntário ou doador!
             </p>
+            </div>
         </section>
 
         <!-- Como Funciona -->
         <section id="como-funciona">
+            <div class="container">
             <h2>Como Funciona</h2>
 
-            <article>
-                <h3>Para Voluntários</h3>
-                <ol>
-                    <li><strong>Escolha um Projeto:</strong> Navegue pelos projetos e encontre uma causa que combine com
-                        você</li>
-                    <li><strong>Cadastre-se:</strong> Preencha o formulário de cadastro com suas informações</li>
-                    <li><strong>Receba o Contato:</strong> O responsável pelo projeto entrará em contato com você</li>
-                    <li><strong>Comece a Transformar:</strong> Inicie sua jornada como voluntário!</li>
-                </ol>
-                <p>
-                    <a href="cadastro.html" title="Cadastre-se como voluntário">
-                        <strong>Quero ser voluntário →</strong>
-                    </a>
-                </p>
-            </article>
+            <div class="grid">
+                <article class="card col-6">
+                    <div class="card-header">
+                        <h3>Para Voluntários</h3>
+                    </div>
+                    <div class="card-body">
+                        <ol>
+                            <li><strong>Escolha um Projeto:</strong> Navegue pelos projetos e encontre uma causa que combine com
+                                você</li>
+                            <li><strong>Cadastre-se:</strong> Preencha o formulário de cadastro com suas informações</li>
+                            <li><strong>Receba o Contato:</strong> O responsável pelo projeto entrará em contato com você</li>
+                            <li><strong>Comece a Transformar:</strong> Inicie sua jornada como voluntário!</li>
+                        </ol>
+                    </div>
+                    <div class="card-footer">
+                        <a href="cadastro.html" class="btn btn-primary" title="Cadastre-se como voluntário">Quero ser voluntário</a>
+                    </div>
+                </article>
 
-            <article>
-                <h3>Para Doadores</h3>
-                <ol>
-                    <li><strong>Conheça os Projetos:</strong> Leia sobre cada iniciativa e seu impacto</li>
-                    <li><strong>Escolha Como Ajudar:</strong> Selecione doação única ou recorrente</li>
-                    <li><strong>Faça sua Doação:</strong> Processo seguro e transparente</li>
-                    <li><strong>Acompanhe o Impacto:</strong> Receba relatórios sobre como sua doação está sendo usada
-                    </li>
-                </ol>
-                <p>
-                    <a href="cadastro.html" title="Cadastre-se como doador">
-                        <strong>Quero doar →</strong>
-                    </a>
-                </p>
-            </article>
+                <article class="card col-6">
+                    <div class="card-header">
+                        <h3>Para Doadores</h3>
+                    </div>
+                    <div class="card-body">
+                        <ol>
+                            <li><strong>Conheça os Projetos:</strong> Leia sobre cada iniciativa e seu impacto</li>
+                            <li><strong>Escolha Como Ajudar:</strong> Selecione doação única ou recorrente</li>
+                            <li><strong>Faça sua Doação:</strong> Processo seguro e transparente</li>
+                            <li><strong>Acompanhe o Impacto:</strong> Receba relatórios sobre como sua doação está sendo usada
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="card-footer">
+                        <a href="cadastro.html" class="btn btn-secondary" title="Cadastre-se como doador">Quero doar</a>
+                    </div>
+                </article>
+            </div>
+            </div>
         </section>
 
         <!-- Projetos Ativos -->
         <section id="projetos-ativos">
+            <div class="container">
             <h2>Projetos Ativos</h2>
             <p>Iniciativas em andamento que precisam do seu apoio agora!</p>
 
-            <article>
-                <h3>Educação para Todos</h3>
-                <figure>
+            <article class="card">
+                <div class="card-header">
+                    <span class="badge badge-primary">Ativo</span>
+                    <span class="badge badge-secondary badge-group">Educação</span>
+                </div>
+                
+                <div class="card-body">
                     <img src="assets/img/projeto-educacao-destaque.jpg"
                         alt="Sala de aula com crianças aprendendo informática" width="700" height="400">
-                    <figcaption>Crianças aprendendo programação no projeto</figcaption>
-                </figure>
 
-                <h4>Sobre o Projeto</h4>
-                <p>
-                    Oferecemos reforço escolar e aulas de informática para crianças de comunidades
-                    carentes. O objetivo é garantir que todos tenham acesso a uma educação de
-                    qualidade e às ferramentas tecnológicas do século XXI.
-                </p>
+                    <h3>Educação para Todos</h3>
+                    <p>
+                        Oferecemos reforço escolar e aulas de informática para crianças de comunidades
+                        carentes. O objetivo é garantir que todos tenham acesso a uma educação de
+                        qualidade e às ferramentas tecnológicas do século XXI.
+                    </p>
 
-                <h4>Localização</h4>
-                <p>São Paulo - SP | Zona Leste</p>
+                    <p><strong>📍 Localização:</strong> São Paulo - SP | Zona Leste</p>
+                    <p><strong>👥 Público-Alvo:</strong> Crianças e adolescentes de 7 a 16 anos</p>
 
-                <h4>Público-Alvo</h4>
-                <p>Crianças e adolescentes de 7 a 16 anos</p>
+                    <h4>Meta de Arrecadação</h4>
+                    <p>
+                        <meter value="45000" min="0" max="100000" title="45% da meta alcançada">45% alcançado</meter><br>
+                        R$ 45.000 arrecadados de R$ 100.000
+                    </p>
 
-                <h4>Meta de Arrecadação</h4>
-                <p>
-                    <meter value="45000" min="0" max="100000" title="45% da meta alcançada">45% alcançado</meter><br>
-                    R$ 45.000 arrecadados de R$ 100.000
-                </p>
+                    <h4>Precisa de</h4>
+                    <ul>
+                        <li>Professores voluntários (presencial e online)</li>
+                        <li>Doações de computadores e tablets</li>
+                        <li>Contribuições financeiras para material didático</li>
+                    </ul>
 
-                <h4>Precisa de</h4>
-                <ul>
-                    <li>Professores voluntários (presencial e online)</li>
-                    <li>Doações de computadores e tablets</li>
-                    <li>Contribuições financeiras para material didático</li>
-                </ul>
+                    <p><strong>🎯 Impacto Esperado:</strong> Beneficiar 300 crianças em 2025</p>
+                </div>
 
-                <h4>Impacto Esperado</h4>
-                <p>Beneficiar 300 crianças em 2025</p>
-
-                <p>
-                    <a href="cadastro.html" title="Apoie este projeto">
-                        <strong>Quero apoiar este projeto →</strong>
-                    </a>
-                </p>
+                <div class="card-footer">
+                    <a href="cadastro.html" class="btn btn-primary" title="Apoie este projeto">Quero apoiar este projeto</a>
+                </div>
             </article>
 
             <hr>
 
-            <article>
-                <h3>Alimente uma Vida</h3>
-                <figure>
+            <article class="card">
+                <div class="card-header">
+                    <span class="badge badge-primary">Ativo</span>
+                    <span class="badge badge-warning badge-group">Alimentação</span>
+                </div>
+                
+                <div class="card-body">
                     <img src="assets/img/projeto-alimentacao-destaque.jpg"
                         alt="Voluntários distribuindo cestas básicas para famílias" width="700" height="400">
-                    <figcaption>Distribuição de cestas básicas na comunidade</figcaption>
-                </figure>
 
-                <h4>Sobre o Projeto</h4>
-                <p>
-                    Combatemos a fome através da distribuição de cestas básicas, refeições
-                    comunitárias e oficinas de educação nutricional. Ninguém deveria dormir
-                    com fome em um país tão rico como o Brasil.
-                </p>
+                    <h3>Alimente uma Vida</h3>
+                    <p>
+                        Combatemos a fome através da distribuição de cestas básicas, refeições
+                        comunitárias e oficinas de educação nutricional. Ninguém deveria dormir
+                        com fome em um país tão rico como o Brasil.
+                    </p>
 
-                <h4>Localização</h4>
-                <p>Rio de Janeiro - RJ | Zona Norte</p>
+                    <p><strong>📍 Localização:</strong> Rio de Janeiro - RJ | Zona Norte</p>
+                    <p><strong>👥 Público-Alvo:</strong> Famílias em situação de insegurança alimentar</p>
 
-                <h4>Público-Alvo</h4>
-                <p>Famílias em situação de insegurança alimentar</p>
+                    <h4>Meta de Arrecadação</h4>
+                    <p>
+                        <meter value="72000" min="0" max="80000" title="90% da meta alcançada">90% alcançado</meter><br>
+                        R$ 72.000 arrecadados de R$ 80.000
+                    </p>
 
-                <h4>Meta de Arrecadação</h4>
-                <p>
-                    <meter value="72000" min="0" max="80000" title="90% da meta alcançada">90% alcançado</meter><br>
-                    R$ 72.000 arrecadados de R$ 80.000
-                </p>
+                    <h4>Precisa de</h4>
+                    <ul>
+                        <li>Voluntários para preparar e distribuir refeições</li>
+                        <li>Doações de alimentos não perecíveis</li>
+                        <li>Nutricionistas voluntários</li>
+                        <li>Contribuições financeiras</li>
+                    </ul>
 
-                <h4>Precisa de</h4>
-                <ul>
-                    <li>Voluntários para preparar e distribuir refeições</li>
-                    <li>Doações de alimentos não perecíveis</li>
-                    <li>Nutricionistas voluntários</li>
-                    <li>Contribuições financeiras</li>
-                </ul>
+                    <p><strong>🎯 Impacto Esperado:</strong> Atender 500 famílias mensalmente</p>
+                </div>
 
-                <h4>Impacto Esperado</h4>
-                <p>Atender 500 famílias mensalmente</p>
-
-                <p>
-                    <a href="cadastro.html" title="Apoie este projeto">
-                        <strong>Quero apoiar este projeto →</strong>
-                    </a>
-                </p>
+                <div class="card-footer">
+                    <a href="cadastro.html" class="btn btn-primary" title="Apoie este projeto">Quero apoiar este projeto</a>
+                </div>
             </article>
 
             <hr>
 
-            <article>
-                <h3>Verde Vivo - Reflorestamento Urbano</h3>
-                <figure>
+            <article class="card">
+                <div class="card-header">
+                    <span class="badge badge-primary">Ativo</span>
+                    <span class="badge badge-secondary badge-group">Meio Ambiente</span>
+                </div>
+                
+                <div class="card-body">
                     <img src="assets/img/projeto-meio-ambiente-destaque.jpg"
                         alt="Plantando mudas em área verde urbana" width="700" height="400">
-                    <figcaption>Mutirão de plantio de árvores nativas</figcaption>
-                </figure>
 
-                <h4>Sobre o Projeto</h4>
-                <p>
-                    Promovemos o reflorestamento de áreas urbanas degradadas, plantando árvores
-                    nativas e criando espaços verdes nas comunidades. Além de melhorar o clima,
-                    geramos conscientização ambiental.
-                </p>
+                    <h3>Verde Vivo - Reflorestamento Urbano</h3>
+                    <p>
+                        Promovemos o reflorestamento de áreas urbanas degradadas, plantando árvores
+                        nativas e criando espaços verdes nas comunidades. Além de melhorar o clima,
+                        geramos conscientização ambiental.
+                    </p>
 
-                <h4>Localização</h4>
-                <p>Belo Horizonte - MG | Região Metropolitana</p>
+                    <p><strong>📍 Localização:</strong> Belo Horizonte - MG | Região Metropolitana</p>
+                    <p><strong>👥 Público-Alvo:</strong> Comunidades urbanas e escolas públicas</p>
 
-                <h4>Público-Alvo</h4>
-                <p>Comunidades urbanas e escolas públicas</p>
+                    <h4>Meta de Plantio</h4>
+                    <p>
+                        <meter value="3500" min="0" max="10000" title="35% da meta alcançada">35% alcançado</meter><br>
+                        3.500 árvores plantadas de 10.000
+                    </p>
 
-                <h4>Meta de Plantio</h4>
-                <p>
-                    <meter value="3500" min="0" max="10000" title="35% da meta alcançada">35% alcançado</meter><br>
-                    3.500 árvores plantadas de 10.000
-                </p>
+                    <h4>Precisa de</h4>
+                    <ul>
+                        <li>Voluntários para mutirões de plantio (aos sábados)</li>
+                        <li>Engenheiros ambientais e agrônomos</li>
+                        <li>Doações de mudas e ferramentas de jardinagem</li>
+                        <li>Apoio logístico e transporte</li>
+                    </ul>
 
-                <h4>Precisa de</h4>
-                <ul>
-                    <li>Voluntários para mutirões de plantio (aos sábados)</li>
-                    <li>Engenheiros ambientais e agrônomos</li>
-                    <li>Doações de mudas e ferramentas de jardinagem</li>
-                    <li>Apoio logístico e transporte</li>
-                </ul>
+                    <p><strong>🎯 Impacto Esperado:</strong> Plantar 10.000 árvores nativas até dezembro de 2025</p>
+                </div>
 
-                <h4>Impacto Esperado</h4>
-                <p>Plantar 10.000 árvores nativas até dezembro de 2025</p>
-
-                <p>
-                    <a href="cadastro.html" title="Apoie este projeto">
-                        <strong>Quero apoiar este projeto →</strong>
-                    </a>
-                </p>
+                <div class="card-footer">
+                    <a href="cadastro.html" class="btn btn-primary" title="Apoie este projeto">Quero apoiar este projeto</a>
+                </div>
             </article>
 
             <hr>
 
-            <article>
-                <h3>Capacitação Profissional Jovem</h3>
-                <figure>
-                    <img src="assets/img/projeto-capacitacao-destaque.jpg"
-                        alt="Jovens em curso de capacitação profissional" width="700" height="400">
-                    <figcaption>Jovens estudando robótica</figcaption>
-                </figure>
+            <article class="card">
+                <div class="card-header">
+                    <span class="badge badge-primary">Ativo</span>
+                    <span class="badge badge-secondary badge-group">Capacitação</span>
+                </div>
+                
+                <div class="card-body">
+                    <h3>Capacitação Profissional Jovem</h3>
+                    <figure>
+                        <img src="assets/img/projeto-capacitacao-destaque.jpg"
+                            alt="Jovens em curso de capacitação profissional" width="700" height="400">
+                        <figcaption>Jovens estudando robótica</figcaption>
+                    </figure>
 
-                <h4>Sobre o Projeto</h4>
-                <p>
-                    Oferecemos cursos profissionalizantes gratuitos para jovens de baixa renda,
-                    preparando-os para o mercado de trabalho. Incluímos desde soft skills até
-                    habilidades técnicas em áreas de alta demanda.
-                </p>
+                    <h4>Sobre o Projeto</h4>
+                    <p>
+                        Oferecemos cursos profissionalizantes gratuitos para jovens de baixa renda,
+                        preparando-os para o mercado de trabalho. Incluímos desde soft skills até
+                        habilidades técnicas em áreas de alta demanda.
+                    </p>
 
-                <h4>Localização</h4>
-                <p>Salvador - BA | Subúrbio Ferroviário</p>
+                    <h4>Localização</h4>
+                    <p>Salvador - BA | Subúrbio Ferroviário</p>
 
-                <h4>Público-Alvo</h4>
-                <p>Jovens de 16 a 24 anos</p>
+                    <h4>Público-Alvo</h4>
+                    <p>Jovens de 16 a 24 anos</p>
 
-                <h4>Meta de Arrecadação</h4>
-                <p>
-                    <meter value="35000" min="0" max="60000" title="58% da meta alcançada">58% alcançado</meter><br>
-                    R$ 35.000 arrecadados de R$ 60.000
-                </p>
+                    <h4>Meta de Arrecadação</h4>
+                    <p>
+                        <meter value="35000" min="0" max="60000" title="58% da meta alcançada">58% alcançado</meter><br>
+                        R$ 35.000 arrecadados de R$ 60.000
+                    </p>
 
-                <h4>Precisa de</h4>
-                <ul>
-                    <li>Instrutores voluntários (presencial e online)</li>
-                    <li>Profissionais para mentorias individuais</li>
-                    <li>Doações de equipamentos (computadores, projetores)</li>
-                    <li>Empresas parceiras para estágios</li>
-                </ul>
+                    <h4>Precisa de</h4>
+                    <ul>
+                        <li>Instrutores voluntários (presencial e online)</li>
+                        <li>Profissionais para mentorias individuais</li>
+                        <li>Doações de equipamentos (computadores, projetores)</li>
+                        <li>Empresas parceiras para estágios</li>
+                    </ul>
 
-                <h4>Impacto Esperado</h4>
-                <p>Capacitar 200 jovens e inserir 70% no mercado de trabalho</p>
+                    <h4>Impacto Esperado</h4>
+                    <p>Capacitar 200 jovens e inserir 70% no mercado de trabalho</p>
+                </div>
 
-                <p>
-                    <a href="cadastro.html" title="Apoie este projeto">
-                        <strong>Quero apoiar este projeto →</strong>
-                    </a>
-                </p>
+                <div class="card-footer">
+                    <a href="cadastro.html" class="btn btn-primary" title="Apoie este projeto">Quero apoiar este projeto</a>
+                </div>
             </article>
 
             <hr>
 
-            <article>
-                <h3>Lar Seguro - Apoio a Vítimas de Violência</h3>
-                <figure>
-                    <img src="assets/img/projeto-apoio-mulheres.jpg" alt="Espaço acolhedor de atendimento psicológico"
-                        width="700" height="400">
-                    <figcaption>Espaço de acolhimento e apoio psicológico</figcaption>
-                </figure>
+            <article class="card">
+                <div class="card-header">
+                    <span class="badge badge-primary">Ativo</span>
+                    <span class="badge badge-secondary badge-group">Assistência Social</span>
+                </div>
 
-                <h4>Sobre o Projeto</h4>
-                <p>
-                    Oferecemos acolhimento, apoio psicológico e jurídico para mulheres vítimas
-                    de violência doméstica. Trabalhamos para que elas recuperem sua autonomia
-                    e segurança.
-                </p>
+                <div class="card-body">
+                    <h3>Lar Seguro - Apoio a Vítimas de Violência</h3>
+                    <figure>
+                        <img src="assets/img/projeto-apoio-mulheres.jpg" alt="Espaço acolhedor de atendimento psicológico"
+                            width="700" height="400">
+                        <figcaption>Espaço de acolhimento e apoio psicológico</figcaption>
+                    </figure>
 
-                <h4>Localização</h4>
-                <p>Recife - PE | Centro</p>
+                    <h4>Sobre o Projeto</h4>
+                    <p>
+                        Oferecemos acolhimento, apoio psicológico e jurídico para mulheres vítimas
+                        de violência doméstica. Trabalhamos para que elas recuperem sua autonomia
+                        e segurança.
+                    </p>
 
-                <h4>Público-Alvo</h4>
-                <p>Mulheres vítimas de violência doméstica e seus filhos</p>
+                    <h4>Localização</h4>
+                    <p>Recife - PE | Centro</p>
 
-                <h4>Meta de Arrecadação</h4>
-                <p>
-                    <meter value="28000" min="0" max="50000" title="56% da meta alcançada">56% alcançado</meter><br>
-                    R$ 28.000 arrecadados de R$ 50.000
-                </p>
+                    <h4>Público-Alvo</h4>
+                    <p>Mulheres vítimas de violência doméstica e seus filhos</p>
 
-                <h4>Precisa de</h4>
-                <ul>
-                    <li>Psicólogos e assistentes sociais voluntários</li>
-                    <li>Advogados para orientação jurídica</li>
-                    <li>Doações de roupas, móveis e itens de higiene</li>
-                    <li>Contribuições para manutenção do abrigo</li>
-                </ul>
+                    <h4>Meta de Arrecadação</h4>
+                    <p>
+                        <meter value="28000" min="0" max="50000" title="56% da meta alcançada">56% alcançado</meter><br>
+                        R$ 28.000 arrecadados de R$ 50.000
+                    </p>
 
-                <h4>Impacto Esperado</h4>
-                <p>Acolher e apoiar 150 mulheres e suas famílias em 2025</p>
+                    <h4>Precisa de</h4>
+                    <ul>
+                        <li>Psicólogos e assistentes sociais voluntários</li>
+                        <li>Advogados para orientação jurídica</li>
+                        <li>Doações de roupas, móveis e itens de higiene</li>
+                        <li>Contribuições para manutenção do abrigo</li>
+                    </ul>
 
-                <p>
-                    <a href="cadastro.html" title="Apoie este projeto">
-                        <strong>Quero apoiar este projeto →</strong>
-                    </a>
-                </p>
+                    <h4>Impacto Esperado</h4>
+                    <p>Acolher e apoiar 150 mulheres e suas famílias em 2025</p>
+                </div>
+
+                <div class="card-footer">
+                    <a href="cadastro.html" class="btn btn-primary" title="Apoie este projeto">Quero apoiar este projeto</a>
+                </div>
             </article>
+            </div>
         </section>
 
         <!-- Projetos Concluídos -->
         <section id="projetos-concluidos">
+            <div class="container">
             <h2>Projetos Concluídos</h2>
             <p>Celebre conosco as conquistas já realizadas!</p>
 
-            <article>
-                <h3>Natal Solidário 2024</h3>
-                <figure>
-                    <img src="assets/img/projeto-natal-2024.jpg" alt="População recebendo presentes de Natal" width="600"
-                        height="400">
-                    <figcaption>Campanha de Natal 2024 - Mais de 2.000 crianças atendidas</figcaption>
-                </figure>
+            <article class="card">
+                <div class="card-header">
+                    <span class="badge badge-secondary">Concluído</span>
+                    <h3>Natal Solidário 2024</h3>
+                </div>
+                <div class="card-body">
+                    <figure>
+                        <img src="assets/img/projeto-natal-2024.jpg" alt="População recebendo presentes de Natal" width="600"
+                            height="400">
+                        <figcaption>Campanha de Natal 2024 - Mais de 2.000 crianças atendidas</figcaption>
+                    </figure>
 
-                <h4>Resultados Alcançados</h4>
-                <ul>
-                    <li>2.137 crianças receberam presentes</li>
-                    <li>800 cestas básicas distribuídas</li>
-                    <li>R$ 150.000 arrecadados</li>
-                    <li>350 voluntários participaram</li>
-                </ul>
+                    <h4>Resultados Alcançados</h4>
+                    <ul>
+                        <li>2.137 crianças receberam presentes</li>
+                        <li>800 cestas básicas distribuídas</li>
+                        <li>R$ 150.000 arrecadados</li>
+                        <li>350 voluntários participaram</li>
+                    </ul>
 
-                <p><strong>Período:</strong> Novembro a Dezembro de 2024</p>
-                <p><strong>Status:</strong> ✅ Concluído com sucesso</p>
+                    <p><strong>Período:</strong> Novembro a Dezembro de 2024</p>
+                    <p><strong>Status:</strong> ✅ Concluído com sucesso</p>
+                </div>
             </article>
 
             <hr>
 
-            <article>
-                <h3>Biblioteca Comunitária do Parque Verde</h3>
-                <figure>
-                    <img src="assets/img/projeto-biblioteca.jpg" alt="Biblioteca comunitária inaugurada" width="600"
-                        height="400">
-                    <figcaption>Biblioteca inaugurada em agosto de 2024</figcaption>
-                </figure>
+            <article class="card">
+                <div class="card-header">
+                    <span class="badge badge-secondary">Concluído</span>
+                    <h3>Biblioteca Comunitária do Parque Verde</h3>
+                </div>
+                <div class="card-body">
+                    <figure>
+                        <img src="assets/img/projeto-biblioteca.jpg" alt="Biblioteca comunitária inaugurada" width="600"
+                            height="400">
+                        <figcaption>Biblioteca inaugurada em agosto de 2024</figcaption>
+                    </figure>
 
-                <h4>Resultados Alcançados</h4>
-                <ul>
-                    <li>Biblioteca construída e equipada</li>
-                    <li>3.500 livros doados e catalogados</li>
-                    <li>20 computadores instalados</li>
-                    <li>Atende 500+ pessoas por mês</li>
-                </ul>
+                    <h4>Resultados Alcançados</h4>
+                    <ul>
+                        <li>Biblioteca construída e equipada</li>
+                        <li>3.500 livros doados e catalogados</li>
+                        <li>20 computadores instalados</li>
+                        <li>Atende 500+ pessoas por mês</li>
+                    </ul>
 
-                <p><strong>Período:</strong> Janeiro a Agosto de 2024</p>
-                <p><strong>Status:</strong> ✅ Concluído e em operação</p>
+                    <p><strong>Período:</strong> Janeiro a Agosto de 2024</p>
+                    <p><strong>Status:</strong> ✅ Concluído e em operação</p>
+                </div>
             </article>
 
             <hr>
 
-            <article>
-                <h3>Campanha Agasalho 2024</h3>
-                <figure>
-                    <img src="assets/img/projeto-agasalho.jpg" alt="Doação de agasalhos para pessoas em situação de rua"
-                        width="600" height="400">
-                    <figcaption>Distribuição de agasalhos no inverno de 2024</figcaption>
-                </figure>
+            <article class="card">
+                <div class="card-header">
+                    <span class="badge badge-secondary">Concluído</span>
+                    <h3>Campanha Agasalho 2024</h3>
+                </div>
+                <div class="card-body">
+                    <figure>
+                        <img src="assets/img/projeto-agasalho.jpg" alt="Doação de agasalhos para pessoas em situação de rua"
+                            width="600" height="400">
+                        <figcaption>Distribuição de agasalhos no inverno de 2024</figcaption>
+                    </figure>
 
-                <h4>Resultados Alcançados</h4>
-                <ul>
-                    <li>5.000 peças de roupa distribuídas</li>
-                    <li>1.200 cobertores doados</li>
-                    <li>800 pessoas em situação de rua atendidas</li>
-                    <li>180 voluntários mobilizados</li>
-                </ul>
+                    <h4>Resultados Alcançados</h4>
+                    <ul>
+                        <li>5.000 peças de roupa distribuídas</li>
+                        <li>1.200 cobertores doados</li>
+                        <li>800 pessoas em situação de rua atendidas</li>
+                        <li>180 voluntários mobilizados</li>
+                    </ul>
 
-                <p><strong>Período:</strong> Junho a Julho de 2024</p>
-                <p><strong>Status:</strong> ✅ Concluído com sucesso</p>
+                    <p><strong>Período:</strong> Junho a Julho de 2024</p>
+                    <p><strong>Status:</strong> ✅ Concluído com sucesso</p>
+                </div>
             </article>
+            </div>
         </section>
 
         <!-- Galeria Multimídia -->
         <section id="galeria-multimidia">
+            <div class="container">
             <h2>Galeria Multimídia</h2>
             <p>Veja nossos projetos em ação através de imagens e vídeos.</p>
 
@@ -468,39 +509,29 @@
                     <figcaption>Episódio #02 - Histórias de transformação</figcaption>
                 </figure>
             </article>
+            </div>
         </section>
 
         <!-- Call to Action Final -->
         <section id="cta-final">
+            <div class="container">
             <h2>Faça Parte Dessa Transformação</h2>
             <p>
                 Escolha como você quer contribuir e comece hoje mesmo a fazer a diferença
                 na vida de milhares de pessoas. Cada ação conta, cada gesto importa!
             </p>
 
-            <nav aria-label="Opções de contribuição">
-                <ul>
-                    <li>
-                        <a href="cadastro.html" title="Cadastre-se como voluntário">
-                            <strong>→ Quero ser voluntário</strong>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="cadastro.html" title="Cadastre-se como doador">
-                            <strong>→ Quero fazer uma doação</strong>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.html#contato" title="Entre em contato">
-                            <strong>→ Tenho dúvidas</strong>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="flex gap-2">
+                <a href="cadastro.html" class="btn btn-primary" title="Cadastre-se como voluntário">Quero ser voluntário</a>
+                <a href="cadastro.html" class="btn btn-secondary" title="Cadastre-se como doador">Quero fazer uma doação</a>
+                <a href="index.html#contato" class="btn btn-outline" title="Entre em contato">Tenho dúvidas</a>
+            </div>
+            </div>
         </section>
     </main>
 
     <footer>
+        <div class="container">
         <p>&copy; 2025 Apoia Hub - Todos os direitos reservados.</p>
         <p>CNPJ: 12.345.678/0001-90</p>
         <p>
@@ -516,6 +547,7 @@
                 <li><a href="index.html#contato" title="Entre em contato">Contato</a></li>
             </ul>
         </nav>
+        </div>
     </footer>
 </body>
 

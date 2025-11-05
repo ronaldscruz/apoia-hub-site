@@ -1,0 +1,53 @@
+/* ===================================
+   CARD COMPONENT
+   =================================== */
+
+/* Base card styles */
+.card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: var(--space-3);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    border-radius: var(--radius);
+    margin-bottom: var(--space-2);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: var(--space-2);
+    font-size: var(--text-lg);
+}
+
+.card p {
+    color: var(--neutral);
+    margin-bottom: var(--space-2);
+}
+
+/* Card structure */
+.card-header {
+    margin-bottom: var(--space-2);
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer {
+    margin-top: var(--space-3);
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--neutral-light);
+}
+

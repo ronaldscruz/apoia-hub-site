@@ -10,33 +10,44 @@
     <meta name="author" content="Apoia Hub">
     <title>Cadastro - Apoia Hub</title>
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Apoia Hub</h1>
-        <p><strong>Conectando quem apoia com quem transforma</strong></p>
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo-link">
+                <img src="assets/img/logo-transparent.png" alt="Apoia Hub - Conectando quem apoia com quem transforma" class="header-logo">
+            </a>
 
-        <nav>
-            <ul>
-                <li><a href="index.html" title="Página Inicial">Início</a></li>
-                <li><a href="projetos.html" title="Conheça nossos projetos">Projetos</a></li>
-                <li><a href="cadastro.html" title="Cadastre-se como voluntário ou doador">Cadastro</a></li>
-                <li><a href="index.html#contato" title="Entre em contato conosco">Contato</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul>
+                    <li><a href="index.html" title="Página Inicial">Início</a></li>
+                    <li><a href="projetos.html" title="Conheça nossos projetos">Projetos</a></li>
+                    <li><a href="cadastro.html" title="Cadastre-se como voluntário ou doador">Cadastro</a></li>
+                    <li><a href="index.html#contato" title="Entre em contato conosco">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <!-- Introdução ao Cadastro -->
         <section id="intro-cadastro">
+            <div class="container">
             <h2>Cadastre-se na Apoia Hub</h2>
-            <p>
-                Seja bem-vindo(a)! Preencha o formulário abaixo para se cadastrar como
-                voluntário ou doador. Sua participação é fundamental para transformarmos
-                vidas juntos. Todos os campos marcados com <abbr title="obrigatório">*</abbr>
+            
+            <div class="alert alert-info">
+                <strong>📋 Atenção:</strong> Preencha o formulário abaixo para se cadastrar como
+                voluntário ou doador. Todos os campos marcados com <abbr title="obrigatório">*</abbr>
                 são obrigatórios.
-            </p>
+            </div>
             <p>
                 <strong>Por que se cadastrar?</strong>
             </p>
@@ -47,10 +58,12 @@
                 <li>Tenha acesso a relatórios de impacto</li>
                 <li>Participe de eventos exclusivos</li>
             </ul>
+            </div>
         </section>
 
         <!-- Formulário de Cadastro -->
         <section id="formulario-cadastro">
+            <div class="container">
             <h2>Formulário de Cadastro</h2>
 
             <form action="#" method="POST" id="form-cadastro">
@@ -437,8 +450,8 @@
 
                 <!-- Botões de Ação -->
                 <p>
-                    <button type="submit">Enviar Cadastro</button>
-                    <button type="reset">Limpar Formulário</button>
+                    <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                    <button type="reset" class="btn btn-outline">Limpar Formulário</button>
                 </p>
 
                 <p>
@@ -448,36 +461,51 @@
                     </small>
                 </p>
             </form>
+            </div>
         </section>
 
         <!-- Informações Adicionais -->
         <section id="info-adicional">
+            <div class="container">
             <h2>Informações Importantes</h2>
 
-            <article>
-                <h3>Proteção de Dados</h3>
-                <p>
-                    Seus dados pessoais estão seguros conosco. Utilizamos criptografia e
-                    seguimos rigorosamente a Lei Geral de Proteção de Dados (LGPD).
-                    Suas informações serão utilizadas apenas para fins relacionados aos
-                    nossos projetos sociais e não serão compartilhadas com terceiros sem
-                    seu consentimento.
-                </p>
-            </article>
+            <div class="grid">
+                <article class="card col-6">
+                    <div class="card-header">
+                        <h3>🔒 Proteção de Dados</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Seus dados pessoais estão seguros conosco. Utilizamos criptografia e
+                            seguimos rigorosamente a Lei Geral de Proteção de Dados (LGPD).
+                            Suas informações serão utilizadas apenas para fins relacionados aos
+                            nossos projetos sociais e não serão compartilhadas com terceiros sem
+                            seu consentimento.
+                        </p>
+                    </div>
+                </article>
 
-            <article>
-                <h3>Próximos Passos</h3>
-                <ol>
-                    <li><strong>Confirmação:</strong> Você receberá um e-mail de confirmação em até 24 horas</li>
-                    <li><strong>Análise:</strong> Nossa equipe analisará seu cadastro</li>
-                    <li><strong>Contato:</strong> Entraremos em contato para alinhar detalhes</li>
-                    <li><strong>Boas-vindas:</strong> Você receberá um kit de boas-vindas digital</li>
-                    <li><strong>Ação:</strong> Comece a fazer a diferença!</li>
-                </ol>
-            </article>
+                <article class="card col-6">
+                    <div class="card-header">
+                        <h3>📋 Próximos Passos</h3>
+                    </div>
+                    <div class="card-body">
+                        <ol>
+                            <li><strong>Confirmação:</strong> Você receberá um e-mail de confirmação em até 24 horas</li>
+                            <li><strong>Análise:</strong> Nossa equipe analisará seu cadastro</li>
+                            <li><strong>Contato:</strong> Entraremos em contato para alinhar detalhes</li>
+                            <li><strong>Boas-vindas:</strong> Você receberá um kit de boas-vindas digital</li>
+                            <li><strong>Ação:</strong> Comece a fazer a diferença!</li>
+                        </ol>
+                    </div>
+                </article>
+            </div>
 
-            <article>
-                <h3>Dúvidas Frequentes</h3>
+            <article class="card">
+                <div class="card-header">
+                    <h3>❓ Dúvidas Frequentes</h3>
+                </div>
+                <div class="card-body">
 
                 <details>
                     <summary>Preciso ter experiência prévia para ser voluntário?</summary>
@@ -518,10 +546,14 @@
                         alinham com seus interesses e habilidades.
                     </p>
                 </details>
+                </div>
             </article>
 
-            <article>
-                <h3>Precisa de Ajuda?</h3>
+            <article class="card">
+                <div class="card-header">
+                    <h3>💬 Precisa de Ajuda?</h3>
+                </div>
+                <div class="card-body">
                 <p>
                     Se você tiver alguma dúvida sobre o cadastro ou sobre nossos projetos,
                     entre em contato conosco:
@@ -533,29 +565,40 @@
                     <li><strong>WhatsApp:</strong> <a href="https://wa.me/5511987654321" target="_blank"
                             rel="noopener noreferrer">(11) 98765-4321</a></li>
                 </ul>
+                </div>
             </article>
+            </div>
         </section>
 
         <!-- Mensagem de Agradecimento -->
         <section id="agradecimento">
-            <h2>Obrigado por Fazer Parte!</h2>
-            <p>
-                Sua decisão de se cadastrar na Apoia Hub é o primeiro passo para transformar
-                vidas. Juntos, somos mais fortes e podemos criar um impacto real na sociedade.
-                Seja bem-vindo(a) à nossa comunidade solidária!
-            </p>
-            <blockquote>
+            <div class="container">
+            
+            <div class="alert alert-success text-center">
+                <h2 class="mb-2">🎉 Obrigado por Fazer Parte!</h2>
                 <p>
-                    "Sozinhos podemos fazer tão pouco; juntos podemos fazer tanto."
+                    Sua decisão de se cadastrar na Apoia Hub é o primeiro passo para transformar
+                    vidas. Juntos, somos mais fortes e podemos criar um impacto real na sociedade.
+                    Seja bem-vindo(a) à nossa comunidade solidária!
                 </p>
-                <footer>
-                    — <cite>Helen Keller</cite>
-                </footer>
-            </blockquote>
+            </div>
+            
+            <div class="card text-center mt-4">
+                <blockquote>
+                    <p>
+                        "Sozinhos podemos fazer tão pouco; juntos podemos fazer tanto."
+                    </p>
+                    <footer>
+                        — <cite>Helen Keller</cite>
+                    </footer>
+                </blockquote>
+            </div>
+            </div>
         </section>
     </main>
 
     <footer>
+        <div class="container">
         <p>&copy; 2025 Apoia Hub - Todos os direitos reservados.</p>
         <p>CNPJ: 12.345.678/0001-90</p>
         <p>
@@ -571,6 +614,7 @@
                 <li><a href="index.html#contato" title="Entre em contato">Contato</a></li>
             </ul>
         </nav>
+        </div>
     </footer>
 </body>
 

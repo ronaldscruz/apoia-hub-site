@@ -1,0 +1,20 @@
+/* ===================================
+   METER COMPONENT (Progress Bar)
+   =================================== */
+
+/* Base meter styles */
+meter {
+    width: 100%;
+    height: 24px;
+}
+
+meter::-webkit-meter-bar {
+    background-color: var(--neutral-light);
+    border-radius: var(--radius);
+}
+
+meter::-webkit-meter-optimum-value {
+    background-color: var(--success);
+    border-radius: var(--radius);
+}
+

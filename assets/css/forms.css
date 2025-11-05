@@ -1,0 +1,139 @@
+/* ===================================
+   FORMULÁRIOS
+   =================================== */
+
+/* === FIELDSET === */
+fieldset {
+    border: 1px solid var(--neutral-light);
+    border-radius: var(--radius);
+    padding: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+legend {
+    font-weight: 600;
+    color: var(--primary);
+    padding: 0 var(--space-1);
+    font-size: var(--text-lg);
+}
+
+/* === LABELS === */
+label {
+    display: inline-block;
+    margin-bottom: var(--space-1);
+    font-weight: 500;
+    color: var(--neutral-dark);
+}
+
+/* === INPUTS === */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: var(--space-2);
+    border: 2px solid var(--neutral-light);
+    border-radius: var(--radius);
+    font-size: var(--text-base);
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+/* Estado focus */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+input:invalid:not(:placeholder-shown),
+select:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--error);
+}
+
+/* === CHECKBOX E RADIO === */
+input[type="checkbox"],
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin-right: var(--space-1);
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+/* === SELECT === */
+select {
+    cursor: pointer;
+    background-color: var(--white);
+}
+
+/* === TEXTAREA === */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* === BUTTONS === */
+button[type="submit"],
+button[type="reset"] {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: var(--transition);
+    margin-right: var(--space-2);
+}
+
+button[type="submit"] {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+button[type="submit"]:hover {
+    background-color: #1d4ed8;
+}
+
+button[type="reset"] {
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+}
+
+button[type="reset"]:hover {
+    background-color: var(--neutral);
+    color: var(--white);
+}
+
+/* === SMALL TEXT === */
+small {
+    display: block;
+    margin-top: var(--space-1);
+    font-size: var(--text-sm);
+    color: var(--neutral);
+}
+
+/* === ABBR === */
+abbr[title] {
+    color: var(--error);
+    text-decoration: none;
+    cursor: help;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 767px) {
+    fieldset {
+        padding: var(--space-2);
+    }
+    
+    button[type="submit"],
+    button[type="reset"] {
+        width: 100%;
+        margin-bottom: var(--space-2);
+    }
+}
+

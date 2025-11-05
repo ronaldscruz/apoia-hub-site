@@ -1,0 +1,25 @@
+/* ===================================
+   FIGURE COMPONENT
+   =================================== */
+
+/* Base figure styles */
+figure {
+    margin: var(--space-3) 0;
+}
+
+/* Auto-center images if no positioning is specified */
+figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Figcaption styling */
+figcaption {
+    margin-top: var(--space-1);
+    font-size: var(--text-sm);
+    color: var(--neutral);
+    font-style: italic;
+    text-align: center;
+}
+

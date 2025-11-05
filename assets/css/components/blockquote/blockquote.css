@@ -1,0 +1,21 @@
+/* ===================================
+   BLOCKQUOTE COMPONENT
+   =================================== */
+
+/* Base blockquote styles */
+blockquote {
+    border-left: 4px solid var(--primary);
+    padding-left: var(--space-3);
+    margin: var(--space-3) 0;
+    font-style: italic;
+    color: var(--neutral);
+}
+
+blockquote footer {
+    margin-top: var(--space-2);
+    font-size: var(--text-sm);
+    background: none;
+    color: var(--neutral-dark);
+    padding: 0;
+}
+
