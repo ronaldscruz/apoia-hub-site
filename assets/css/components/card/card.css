@@ -1,8 +1,3 @@
-/* ===================================
-   CARD COMPONENT
-   =================================== */
-
-/* Base card styles */
 .card {
     background-color: var(--white);
     border-radius: var(--radius);
@@ -34,7 +29,6 @@
     margin-bottom: var(--space-2);
 }
 
-/* Card structure */
 .card-header {
     margin-bottom: var(--space-2);
 }

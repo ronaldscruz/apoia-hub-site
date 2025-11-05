@@ -1,8 +1,3 @@
-/* ===================================
-   FORMULÁRIOS
-   =================================== */
-
-/* === FIELDSET === */
 fieldset {
     border: 1px solid var(--neutral-light);
     border-radius: var(--radius);
@@ -17,7 +12,6 @@ legend {
     font-size: var(--text-lg);
 }
 
-/* === LABELS === */
 label {
     display: inline-block;
     margin-bottom: var(--space-1);
@@ -25,7 +19,6 @@ label {
     color: var(--neutral-dark);
 }
 
-/* === INPUTS === */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -43,7 +36,6 @@ textarea {
     font-family: inherit;
 }
 
-/* Estado focus */
 input:focus,
 select:focus,
 textarea:focus {
@@ -58,7 +50,6 @@ textarea:invalid:not(:placeholder-shown) {
     border-color: var(--error);
 }
 
-/* === CHECKBOX E RADIO === */
 input[type="checkbox"],
 input[type="radio"] {
     width: 18px;
@@ -68,19 +59,16 @@ input[type="radio"] {
     accent-color: var(--primary);
 }
 
-/* === SELECT === */
 select {
     cursor: pointer;
     background-color: var(--white);
 }
 
-/* === TEXTAREA === */
 textarea {
     resize: vertical;
     min-height: 100px;
 }
 
-/* === BUTTONS === */
 button[type="submit"],
 button[type="reset"] {
     padding: var(--space-2) var(--space-4);
@@ -109,7 +97,6 @@ button[type="reset"]:hover {
     color: var(--white);
 }
 
-/* === SMALL TEXT === */
 small {
     display: block;
     margin-top: var(--space-1);
@@ -117,14 +104,12 @@ small {
     color: var(--neutral);
 }
 
-/* === ABBR === */
 abbr[title] {
     color: var(--error);
     text-decoration: none;
     cursor: help;
 }
 
-/* === RESPONSIVO === */
 @media (max-width: 767px) {
     fieldset {
         padding: var(--space-2);

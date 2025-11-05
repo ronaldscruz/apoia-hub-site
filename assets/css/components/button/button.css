@@ -27,7 +27,6 @@
     pointer-events: none;
 }
 
-/* Button variants */
 .btn-primary {
     background-color: var(--primary);
     color: var(--white);

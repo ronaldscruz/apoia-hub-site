@@ -1,8 +1,3 @@
-/* ===================================
-   METER COMPONENT (Progress Bar)
-   =================================== */
-
-/* Base meter styles */
 meter {
     width: 100%;
     height: 24px;

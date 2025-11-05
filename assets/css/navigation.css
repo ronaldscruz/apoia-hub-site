@@ -21,7 +21,6 @@
     }
 }
 
-/* === NAVEGAÇÃO PRINCIPAL === */
 nav ul {
     display: flex;
     gap: var(--space-3);
@@ -39,7 +38,6 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* === MENU HAMBÚRGUER (Mobile) === */
 .menu-toggle {
     display: none;
 }
@@ -60,7 +58,6 @@ nav a:hover {
     transition: var(--transition);
 }
 
-/* === RESPONSIVO === */
 @media (max-width: 767px) {
     .menu-icon {
         display: flex;
@@ -95,7 +92,6 @@ nav a:hover {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    /* Animação do ícone hambúrguer */
     .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -109,7 +105,6 @@ nav a:hover {
     }
 }
 
-/* === FOOTER NAVIGATION === */
 footer nav ul {
     display: flex;
     gap: var(--space-2);
