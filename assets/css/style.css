@@ -140,6 +140,13 @@ dd {
 .text-right { text-align: right; }
 .text-left { text-align: left; }
 
+.link-white { color: var(--white) !important; }
+.link-primary { color: var(--primary) !important; }
+.link-secondary { color: var(--secondary) !important; }
+.link-accent { color: var(--accent) !important; }
+.link-neutral { color: var(--neutral) !important; }
+.link-dark { color: var(--neutral-dark) !important; }
+
 .mt-1 { margin-top: var(--space-1); }
 .mt-2 { margin-top: var(--space-2); }
 .mt-3 { margin-top: var(--space-3); }
