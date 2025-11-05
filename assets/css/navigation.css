@@ -38,6 +38,56 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.has-dropdown {
+    position: relative;
+}
+
+.has-dropdown > a::after {
+    content: '▼';
+    font-size: 0.7em;
+    margin-left: var(--space-1);
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.has-dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    min-width: 200px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: var(--space-1) 0;
+    z-index: 1000;
+    list-style: none;
+}
+
+.dropdown li {
+    margin: 0;
+}
+
+.dropdown a {
+    color: var(--neutral-dark);
+    padding: var(--space-2);
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown a:hover {
+    background-color: var(--neutral-light);
+    color: var(--primary);
+}
+
+.has-dropdown:hover .dropdown {
+    display: block;
+}
+
 .menu-toggle {
     display: none;
 }
@@ -82,14 +132,52 @@ nav a:hover {
     }
     
     .menu-toggle:checked ~ ul {
-        max-height: 500px;
+        max-height: 800px;
         padding: var(--space-2) 0;
     }
     
-    nav a {
+    nav > ul > li > a {
         display: block;
         padding: var(--space-2);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .has-dropdown > a::after {
+        float: right;
+        transform: rotate(0deg);
+    }
+    
+    .dropdown {
+        position: static;
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+        padding: 0;
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    
+    .has-dropdown:hover .dropdown,
+    .has-dropdown:focus-within .dropdown,
+    .has-dropdown:active .dropdown {
+        max-height: 500px;
+    }
+    
+    .dropdown li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .dropdown a {
+        color: var(--white);
+        padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
+        font-size: var(--text-sm);
+        display: block;
+        border-bottom: none;
+    }
+    
+    .dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
     }
     
     .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
