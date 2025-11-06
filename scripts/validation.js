@@ -42,11 +42,42 @@ const FormValidator = {
     preventInvalidSubmit() {
         const form = document.getElementById('form-cadastro');
         form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
             if (!this.validateAll()) {
-                e.preventDefault();
                 this.showGlobalError('Por favor, corrija os erros no formulário antes de enviar.');
+            } else {
+                this.showSuccessModal();
+                form.reset();
             }
         });
+    },
+
+    showSuccessModal() {
+        const modal = document.getElementById('success-modal');
+        const closeBtn = document.getElementById('close-modal');
+        
+        if (modal) {
+            modal.classList.add('active');
+            
+            const closeModal = () => {
+                modal.classList.remove('active');
+                
+                if (typeof FormTypeSwitcher !== 'undefined') {
+                    FormTypeSwitcher.hideAllSections();
+                }
+            };
+            
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        }
     },
 
     validateAll() {

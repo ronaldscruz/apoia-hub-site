@@ -24,3 +24,16 @@
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
 }
 
+.modal-title {
+    color: var(--success);
+    margin-bottom: var(--space-2);
+}
+
+.modal-message {
+    margin-bottom: var(--space-3);
+}
+
+.modal-steps {
+    margin-bottom: var(--space-4);
+}
+
