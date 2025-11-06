@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log('🚀 Apoia Hub - JavaScript Initialized');
 
+    // Initialize theme switcher on all pages
+    if (typeof ThemeSwitcher !== 'undefined') {
+        ThemeSwitcher.init();
+        console.log('🎨 Theme Switcher inicializado');
+    }
+
     if (document.getElementById('projects-container')) {
         console.log('📄 Página de projetos detectada');
         renderProjects();

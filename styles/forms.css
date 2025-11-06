@@ -154,7 +154,6 @@ small {
     display: block;
     margin-top: var(--space-1);
     font-size: var(--text-sm);
-    color: var(--neutral);
 }
 
 abbr[title] {
