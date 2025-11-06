@@ -44,6 +44,16 @@ textarea:focus {
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
+/* Stronger focus for keyboard navigation */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 4px solid var(--accent);
+    outline-offset: 2px;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.3), 0 0 12px rgba(245, 158, 11, 0.5);
+}
+
 input:invalid:not(:placeholder-shown),
 select:invalid:not(:placeholder-shown),
 textarea:invalid:not(:placeholder-shown) {
@@ -59,9 +69,40 @@ input[type="radio"] {
     accent-color: var(--primary);
 }
 
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Stronger focus for keyboard navigation on radios/checkboxes */
+input[type="radio"]:focus-visible,
+input[type="checkbox"]:focus-visible {
+    outline: 4px solid var(--accent);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.2), 0 0 12px rgba(245, 158, 11, 0.6);
+}
+
+label:has(input[type="radio"]:focus),
+label:has(input[type="checkbox"]:focus) {
+    background-color: rgba(37, 99, 235, 0.05);
+    border-radius: var(--radius);
+}
+
+/* Stronger label highlight for keyboard navigation */
+label:has(input[type="radio"]:focus-visible),
+label:has(input[type="checkbox"]:focus-visible) {
+    background-color: rgba(245, 158, 11, 0.15);
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    padding: var(--space-1);
+    margin: calc(-1 * var(--space-1));
+    border-radius: var(--radius);
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.3);
+}
+
 select {
     cursor: pointer;
-    background-color: var(--white);
 }
 
 textarea {
@@ -87,6 +128,12 @@ button[type="submit"]:hover {
     background-color: #1d4ed8;
 }
 
+button[type="submit"]:focus-visible {
+    outline: 4px solid var(--accent);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.3), 0 0 16px rgba(245, 158, 11, 0.5);
+}
+
 button[type="reset"] {
     background-color: var(--neutral-light);
     color: var(--neutral-dark);
@@ -97,11 +144,16 @@ button[type="reset"]:hover {
     color: var(--white);
 }
 
+button[type="reset"]:focus-visible {
+    outline: 4px solid var(--accent);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.3), 0 0 16px rgba(245, 158, 11, 0.5);
+}
+
 small {
     display: block;
     margin-top: var(--space-1);
     font-size: var(--text-sm);
-    color: var(--neutral);
 }
 
 abbr[title] {

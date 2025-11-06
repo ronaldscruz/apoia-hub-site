@@ -14,15 +14,17 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
     <header>
         <div class="container flex justify-between items-center">
             <a href="index.html" class="logo-link">
                 <img src="assets/img/logo-transparent.png" alt="Apoia Hub - Conectando quem apoia com quem transforma" class="header-logo">
             </a>
 
-            <nav>
+            <nav aria-label="Navegação principal">
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle" class="menu-icon">
+                <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu de navegação">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -45,7 +47,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content" role="main">
         <!-- Seção de Apresentação -->
         <section id="apresentacao">
             <div class="container">
@@ -344,35 +346,35 @@
                     <li>
                         <a href="https://facebook.com/apoiahub" title="Siga-nos no Facebook" target="_blank"
                             rel="noopener noreferrer" class="link-primary">
-                            <img src="assets/icons/facebook.svg" alt="Facebook" width="32" height="32">
+                            <img src="assets/icons/facebook.svg" alt="Facebook" width="32" height="32" class="social-icon">
                             Facebook
                         </a>
                     </li>
                     <li>
                         <a href="https://instagram.com/apoiahub" title="Siga-nos no Instagram" target="_blank"
                             rel="noopener noreferrer" class="link-primary">
-                            <img src="assets/icons/instagram.svg" alt="Instagram" width="32" height="32">
+                            <img src="assets/icons/instagram.svg" alt="Instagram" width="32" height="32" class="social-icon">
                             Instagram
                         </a>
                     </li>
                     <li>
                         <a href="https://twitter.com/apoiahub" title="Siga-nos no Twitter" target="_blank"
                             rel="noopener noreferrer" class="link-primary">
-                            <img src="assets/icons/x.svg" alt="Twitter" width="32" height="32">
+                            <img src="assets/icons/x.svg" alt="Twitter" width="32" height="32" class="social-icon">
                             Twitter
                         </a>
                     </li>
                     <li>
                         <a href="https://linkedin.com/company/apoiahub" title="Conecte-se conosco no LinkedIn"
                             target="_blank" rel="noopener noreferrer" class="link-primary">
-                            <img src="assets/icons/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                            <img src="assets/icons/linkedin.svg" alt="LinkedIn" width="32" height="32" class="social-icon">
                             LinkedIn
                         </a>
                     </li>
                     <li>
                         <a href="https://youtube.com/@apoiahub" title="Inscreva-se em nosso canal" target="_blank"
                             rel="noopener noreferrer" class="link-primary">
-                            <img src="assets/icons/youtube.svg" alt="YouTube" width="32" height="32">
+                            <img src="assets/icons/youtube.svg" alt="YouTube" width="32" height="32" class="social-icon">
                             YouTube
                         </a>
                     </li>
@@ -389,7 +391,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo" aria-label="Informações do rodapé">
         <div class="container">
         <p>&copy; 2025 Apoia Hub - Todos os direitos reservados.</p>
         <p>CNPJ: 12.345.678/0001-90</p>
@@ -408,6 +410,8 @@
         </nav>
         </div>
     </footer>
+    <script src="scripts/theme-switcher.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

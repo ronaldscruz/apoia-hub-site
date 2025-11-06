@@ -1,0 +1,116 @@
+/* Accessibility Controls Buttons */
+.accessibility-controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    display: flex;
+    gap: var(--space-1);
+}
+
+.accessibility-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    background-color: var(--white);
+    color: var(--primary);
+    font-size: 24px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.accessibility-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.accessibility-btn:focus-visible {
+    outline: 4px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.accessibility-btn.active {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.accessibility-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 767px) {
+    .accessibility-controls {
+        top: 70px;
+    }
+}
+
+/* Dark Mode - Manual toggle */
+body.dark-mode {
+    --background: #1a1a1a;
+    --text: #ffffff;
+    --white: #1a1a1a;
+    --black: #f9fafb;
+    
+    --primary: #60a5fa;
+    --secondary: #34d399;
+    --accent: #fbbf24;
+    
+    --neutral-light: #374151;
+    --neutral: #9ca3af;
+    --neutral-dark: #f3f4f6;
+    
+    --success: #34d399;
+    --error: #f87171;
+    --warning: #fbbf24;
+    
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode img {
+    opacity: 0.9;
+}
+
+body.dark-mode .card {
+    background-color: #262626;
+    border-color: #404040;
+}
+
+body.dark-mode .alert {
+    background-color: #262626;
+}
+
+body.dark-mode .alert-success {
+    background-color: #1a4d2e;
+    border-color: var(--success);
+}
+
+body.dark-mode .alert-error {
+    background-color: #4d1a1a;
+    border-color: var(--error);
+}
+
+body.dark-mode .alert-info {
+    background-color: #1a2a4d;
+    border-color: var(--primary);
+}
+
+body.dark-mode .accessibility-btn {
+    background-color: #2d3748;
+    border-color: #60a5fa;
+    color: #60a5fa;
+}
+
+body.dark-mode .accessibility-btn.active {
+    background-color: #60a5fa;
+    color: #1a1a1a;
+}
+
+body.dark-mode .social-icon {
+    filter: invert(1);
+}

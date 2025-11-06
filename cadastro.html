@@ -14,6 +14,8 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
     <header>
         <div class="container flex justify-between items-center">
             <a href="index.html" class="logo-link">
@@ -21,9 +23,9 @@
                     class="header-logo">
             </a>
 
-            <nav>
+            <nav aria-label="Navegação principal">
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle" class="menu-icon">
+                <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu de navegação">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -47,7 +49,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content" role="main">
         <!-- Introdução ao Cadastro -->
         <section id="intro-cadastro">
             <div class="container">
@@ -76,27 +78,27 @@
             <div class="container">
                 <h2>Formulário de Cadastro</h2>
 
-                <form action="#" method="POST" id="form-cadastro">
+                <form action="#" method="POST" id="form-cadastro" aria-label="Formulário de cadastro">
 
                     <!-- Tipo de Cadastro -->
-                    <fieldset class="form-section-tipo">
-                        <legend>Tipo de Cadastro <abbr title="obrigatório">*</abbr></legend>
+                    <fieldset class="form-section-tipo" role="radiogroup" aria-labelledby="tipo-cadastro-legend">
+                        <legend id="tipo-cadastro-legend">Tipo de Cadastro <abbr title="obrigatório">*</abbr></legend>
                         <p>Como você deseja contribuir com a Apoia Hub?</p>
 
                         <label>
-                            <input type="radio" name="tipo_cadastro" value="voluntario" required>
+                            <input type="radio" name="tipo_cadastro" value="voluntario" required tabindex="0">
                             Voluntário - Quero doar meu tempo e habilidades
                         </label>
                         <br>
 
                         <label>
-                            <input type="radio" name="tipo_cadastro" value="doador" required>
+                            <input type="radio" name="tipo_cadastro" value="doador" required tabindex="-1">
                             Doador - Quero contribuir financeiramente
                         </label>
                         <br>
 
                         <label>
-                            <input type="radio" name="tipo_cadastro" value="ambos" required>
+                            <input type="radio" name="tipo_cadastro" value="ambos" required tabindex="-1">
                             Ambos - Quero ser voluntário e doador
                         </label>
                     </fieldset>
@@ -172,7 +174,7 @@
 
                         <p>
                             <label for="whatsapp">
-                                <input type="checkbox" id="whatsapp" name="whatsapp" value="sim">
+                                <input type="checkbox" id="whatsapp" name="whatsapp" value="sim" tabindex="0">
                                 Este telefone tem WhatsApp
                             </label>
                         </p>
@@ -268,49 +270,49 @@
 
                         <p>
                             <label>
-                                <input type="checkbox" name="area_educacao" value="educacao">
+                                <input type="checkbox" name="area_educacao" value="educacao" tabindex="0">
                                 Educação
                             </label>
                         </p>
 
                         <p>
                             <label>
-                                <input type="checkbox" name="area_saude" value="saude">
+                                <input type="checkbox" name="area_saude" value="saude" tabindex="0">
                                 Saúde
                             </label>
                         </p>
 
                         <p>
                             <label>
-                                <input type="checkbox" name="area_meio_ambiente" value="meio_ambiente">
+                                <input type="checkbox" name="area_meio_ambiente" value="meio_ambiente" tabindex="0">
                                 Meio Ambiente
                             </label>
                         </p>
 
                         <p>
                             <label>
-                                <input type="checkbox" name="area_assistencia_social" value="assistencia_social">
+                                <input type="checkbox" name="area_assistencia_social" value="assistencia_social" tabindex="0">
                                 Assistência Social
                             </label>
                         </p>
 
                         <p>
                             <label>
-                                <input type="checkbox" name="area_cultura" value="cultura">
+                                <input type="checkbox" name="area_cultura" value="cultura" tabindex="0">
                                 Cultura e Arte
                             </label>
                         </p>
 
                         <p>
                             <label>
-                                <input type="checkbox" name="area_esporte" value="esporte">
+                                <input type="checkbox" name="area_esporte" value="esporte" tabindex="0">
                                 Esporte e Lazer
                             </label>
                         </p>
 
                         <p>
                             <label>
-                                <input type="checkbox" name="area_tecnologia" value="tecnologia">
+                                <input type="checkbox" name="area_tecnologia" value="tecnologia" tabindex="0">
                                 Tecnologia
                             </label>
                         </p>
@@ -347,11 +349,11 @@
                         <p>
                             <label>Modalidade de Voluntariado:</label><br>
                             <label>
-                                <input type="checkbox" name="modalidade_presencial" value="presencial">
+                                <input type="checkbox" name="modalidade_presencial" value="presencial" tabindex="0">
                                 Presencial
                             </label>
                             <label>
-                                <input type="checkbox" name="modalidade_remoto" value="remoto">
+                                <input type="checkbox" name="modalidade_remoto" value="remoto" tabindex="0">
                                 Remoto/Online
                             </label>
                         </p>
@@ -393,7 +395,7 @@
 
                         <p>
                             <label for="nota_fiscal">
-                                <input type="checkbox" id="nota_fiscal" name="nota_fiscal" value="sim">
+                                <input type="checkbox" id="nota_fiscal" name="nota_fiscal" value="sim" tabindex="0">
                                 Desejo receber nota fiscal para dedução no imposto de renda
                             </label>
                         </p>
@@ -437,7 +439,7 @@
 
                         <p>
                             <label for="aceite_termos">
-                                <input type="checkbox" id="aceite_termos" name="aceite_termos" value="aceito" required>
+                                <input type="checkbox" id="aceite_termos" name="aceite_termos" value="aceito" required tabindex="0">
                                 Li e aceito os <a href="#termos" title="Ler termos de uso">termos de uso</a> e a
                                 <a href="#privacidade" title="Ler política de privacidade">política de privacidade</a>
                                 <abbr title="obrigatório">*</abbr>
@@ -446,14 +448,14 @@
 
                         <p>
                             <label for="aceite_comunicacao">
-                                <input type="checkbox" id="aceite_comunicacao" name="aceite_comunicacao" value="aceito">
+                                <input type="checkbox" id="aceite_comunicacao" name="aceite_comunicacao" value="aceito" tabindex="0">
                                 Aceito receber comunicações da Apoia Hub por e-mail e WhatsApp
                             </label>
                         </p>
 
                         <p>
                             <label for="aceite_lgpd">
-                                <input type="checkbox" id="aceite_lgpd" name="aceite_lgpd" value="aceito" required>
+                                <input type="checkbox" id="aceite_lgpd" name="aceite_lgpd" value="aceito" required tabindex="0">
                                 Autorizo o tratamento dos meus dados pessoais conforme a LGPD <abbr
                                     title="obrigatório">*</abbr>
                             </label>
@@ -613,7 +615,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo" aria-label="Informações do rodapé">
         <div class="container">
             <p>&copy; 2025 Apoia Hub - Todos os direitos reservados.</p>
             <p>CNPJ: 12.345.678/0001-90</p>
@@ -634,9 +636,9 @@
     </footer>
 
     <!-- Success Modal -->
-    <div id="success-modal" class="modal">
+    <div id="success-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content modal-success">
-            <h2 class="modal-title">✅ Cadastro Enviado com Sucesso!</h2>
+            <h2 id="modal-title" class="modal-title">✅ Cadastro Enviado com Sucesso!</h2>
             <p class="modal-message">
                 Obrigado por se cadastrar na Apoia Hub! Sua decisão de fazer parte da nossa comunidade 
                 solidária é o primeiro passo para transformar vidas.
@@ -653,6 +655,7 @@
         </div>
     </div>
 
+    <script src="scripts/theme-switcher.js"></script>
     <script src="scripts/masks.js"></script>
     <script src="scripts/form-type-switcher.js"></script>
     <script src="scripts/validation.js"></script>
