@@ -79,12 +79,12 @@
                 <form action="#" method="POST" id="form-cadastro">
 
                     <!-- Tipo de Cadastro -->
-                    <fieldset>
+                    <fieldset class="form-section-tipo">
                         <legend>Tipo de Cadastro <abbr title="obrigatório">*</abbr></legend>
                         <p>Como você deseja contribuir com a Apoia Hub?</p>
 
                         <label>
-                            <input type="radio" name="tipo_cadastro" value="voluntario" required checked>
+                            <input type="radio" name="tipo_cadastro" value="voluntario" required>
                             Voluntário - Quero doar meu tempo e habilidades
                         </label>
                         <br>
@@ -102,7 +102,7 @@
                     </fieldset>
 
                     <!-- Dados Pessoais -->
-                    <fieldset>
+                    <fieldset class="form-section form-section-common">
                         <legend>Dados Pessoais <abbr title="obrigatório">*</abbr></legend>
 
                         <p>
@@ -143,7 +143,7 @@
                     </fieldset>
 
                     <!-- Dados de Contato -->
-                    <fieldset>
+                    <fieldset class="form-section form-section-common">
                         <legend>Dados de Contato <abbr title="obrigatório">*</abbr></legend>
 
                         <p>
@@ -179,7 +179,7 @@
                     </fieldset>
 
                     <!-- Endereço -->
-                    <fieldset>
+                    <fieldset class="form-section form-section-common">
                         <legend>Endereço <abbr title="obrigatório">*</abbr></legend>
 
                         <p>
@@ -258,8 +258,8 @@
                     </fieldset>
 
                     <!-- Informações de Voluntariado -->
-                    <fieldset>
-                        <legend>Informações de Voluntariado (apenas para voluntários)</legend>
+                    <fieldset class="form-section form-section-volunteer">
+                        <legend>Informações de Voluntariado</legend>
 
                         <p>
                             <span><strong>Áreas de Interesse</strong></span><br>
@@ -358,8 +358,8 @@
                     </fieldset>
 
                     <!-- Informações de Doação -->
-                    <fieldset>
-                        <legend>Informações de Doação (apenas para doadores)</legend>
+                    <fieldset class="form-section form-section-donor">
+                        <legend>Informações de Doação</legend>
 
                         <p>
                             <label for="tipo_doacao">Tipo de Doação</label><br>
@@ -400,7 +400,7 @@
                     </fieldset>
 
                     <!-- Como Conheceu -->
-                    <fieldset>
+                    <fieldset class="form-section form-section-common">
                         <legend>Como nos Conheceu?</legend>
 
                         <p>
@@ -418,7 +418,7 @@
                     </fieldset>
 
                     <!-- Mensagem -->
-                    <fieldset>
+                    <fieldset class="form-section form-section-common">
                         <legend>Mensagem (opcional)</legend>
 
                         <p>
@@ -432,7 +432,7 @@
                     </fieldset>
 
                     <!-- Termos e Condições -->
-                    <fieldset>
+                    <fieldset class="form-section form-section-common">
                         <legend>Termos e Condições <abbr title="obrigatório">*</abbr></legend>
 
                         <p>
@@ -461,17 +461,19 @@
                     </fieldset>
 
                     <!-- Botões de Ação -->
-                    <p>
-                        <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
-                        <button type="reset" class="btn btn-outline">Limpar Formulário</button>
-                    </p>
+                    <div class="form-section form-buttons">
+                        <p>
+                            <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                            <button type="reset" class="btn btn-outline">Limpar Formulário</button>
+                        </p>
 
-                    <p>
-                        <small>
-                            Ao clicar em "Enviar Cadastro", você concorda com nossos termos e
-                            confirma que todas as informações fornecidas são verdadeiras.
-                        </small>
-                    </p>
+                        <p>
+                            <small>
+                                Ao clicar em "Enviar Cadastro", você concorda com nossos termos e
+                                confirma que todas as informações fornecidas são verdadeiras.
+                            </small>
+                        </p>
+                    </div>
                 </form>
             </div>
         </section>
@@ -632,6 +634,7 @@
     </footer>
 
     <script src="scripts/masks.js"></script>
+    <script src="scripts/form-type-switcher.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 
