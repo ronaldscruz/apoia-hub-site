@@ -143,3 +143,26 @@ abbr[title] {
     }
 }
 
+/* Form Validation Styles */
+.field-error {
+    border-color: var(--error) !important;
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+.field-error:focus {
+    border-color: var(--error) !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.error-message {
+    display: block;
+    color: var(--error);
+    font-size: var(--text-sm);
+    margin-top: var(--space-1);
+    font-weight: 500;
+}
+
+.error-message::before {
+    content: '⚠ ';
+}
+

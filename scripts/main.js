@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
             FormTypeSwitcher.init();
             console.log('🎯 Form Type Switcher inicializado');
         }
+        if (typeof FormValidator !== 'undefined') {
+            FormValidator.init();
+            console.log('✅ Form Validator inicializado');
+        }
     }
 
     console.log('✅ Todas as funcionalidades carregadas com sucesso');
