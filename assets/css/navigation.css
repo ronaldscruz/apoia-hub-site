@@ -120,19 +120,20 @@ nav a:hover {
     nav ul {
         position: absolute;
         top: 100%;
-        left: 0;
+        left: -240p;
         right: 0;
         background-color: var(--primary);
         flex-direction: column;
         gap: 0;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
+        transition: max-height 0.1s ease-in-out;
         box-shadow: var(--shadow);
     }
     
     .menu-toggle:checked ~ ul {
         max-height: 800px;
+        width: 240px;
         padding: var(--space-2) 0;
     }
     
