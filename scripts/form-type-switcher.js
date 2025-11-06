@@ -2,6 +2,7 @@ const FormTypeSwitcher = {
     init() {
         this.hideAllSections();
         this.attachEventListeners();
+        this.setupRadioGroupKeyboard();
         this.checkPreselectedType();
     },
 
@@ -15,7 +16,39 @@ const FormTypeSwitcher = {
         document.querySelectorAll('input[name="tipo_cadastro"]').forEach(radio => {
             radio.addEventListener('change', (e) => {
                 this.showFormForType(e.target.value);
+                this.updateRadioTabIndex(e.target);
             });
+        });
+    },
+
+    setupRadioGroupKeyboard() {
+        const radios = document.querySelectorAll('input[name="tipo_cadastro"]');
+        
+        radios.forEach((radio, index) => {
+            radio.addEventListener('keydown', (e) => {
+                let targetIndex;
+                
+                if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    targetIndex = (index + 1) % radios.length;
+                } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    targetIndex = (index - 1 + radios.length) % radios.length;
+                } else {
+                    return;
+                }
+                
+                radios[targetIndex].checked = true;
+                radios[targetIndex].focus();
+                this.updateRadioTabIndex(radios[targetIndex]);
+                this.showFormForType(radios[targetIndex].value);
+            });
+        });
+    },
+
+    updateRadioTabIndex(selectedRadio) {
+        document.querySelectorAll('input[name="tipo_cadastro"]').forEach(radio => {
+            radio.tabIndex = radio === selectedRadio ? 0 : -1;
         });
     },
 
