@@ -81,24 +81,24 @@
                 <form action="#" method="POST" id="form-cadastro" aria-label="Formulário de cadastro">
 
                     <!-- Tipo de Cadastro -->
-                    <fieldset class="form-section-tipo">
-                        <legend>Tipo de Cadastro <abbr title="obrigatório">*</abbr></legend>
+                    <fieldset class="form-section-tipo" role="radiogroup" aria-labelledby="tipo-cadastro-legend">
+                        <legend id="tipo-cadastro-legend">Tipo de Cadastro <abbr title="obrigatório">*</abbr></legend>
                         <p>Como você deseja contribuir com a Apoia Hub?</p>
 
                         <label>
-                            <input type="radio" name="tipo_cadastro" value="voluntario" required>
+                            <input type="radio" name="tipo_cadastro" value="voluntario" required tabindex="0">
                             Voluntário - Quero doar meu tempo e habilidades
                         </label>
                         <br>
 
                         <label>
-                            <input type="radio" name="tipo_cadastro" value="doador" required>
+                            <input type="radio" name="tipo_cadastro" value="doador" required tabindex="-1">
                             Doador - Quero contribuir financeiramente
                         </label>
                         <br>
 
                         <label>
-                            <input type="radio" name="tipo_cadastro" value="ambos" required>
+                            <input type="radio" name="tipo_cadastro" value="ambos" required tabindex="-1">
                             Ambos - Quero ser voluntário e doador
                         </label>
                     </fieldset>
