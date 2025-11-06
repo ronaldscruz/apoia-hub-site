@@ -59,6 +59,22 @@ input[type="radio"] {
     accent-color: var(--primary);
 }
 
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus-visible,
+input[type="checkbox"]:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+label:has(input[type="radio"]:focus),
+label:has(input[type="checkbox"]:focus) {
+    background-color: rgba(37, 99, 235, 0.08);
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: var(--radius);
+}
+
 select {
     cursor: pointer;
     background-color: var(--white);
