@@ -1,0 +1,164 @@
+/* Dark Mode - Activated by user's OS/browser dark mode preference */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Backgrounds and text - inverted */
+        --background: #1a1a1a;
+        --text: #ffffff;
+        --white: #1a1a1a;
+        --black: #f9fafb;
+        
+        /* Primary colors - adjusted for dark backgrounds */
+        --primary: #60a5fa;
+        --secondary: #34d399;
+        --accent: #fbbf24;
+        
+        /* Neutral colors - inverted */
+        --neutral-light: #374151;
+        --neutral: #9ca3af;
+        --neutral-dark: #f3f4f6;
+        
+        /* Status colors - slightly brightened */
+        --success: #34d399;
+        --error: #f87171;
+        --warning: #fbbf24;
+        
+        /* Shadows adjusted for dark mode */
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Image adjustments for dark mode */
+    img {
+        opacity: 0.9;
+    }
+    
+    /* Card backgrounds need slight adjustment */
+    .card {
+        background-color: #262626;
+        border-color: #404040;
+    }
+    
+    /* Alert backgrounds */
+    .alert {
+        background-color: #262626;
+    }
+    
+    .alert-success {
+        background-color: #1a4d2e;
+        border-color: var(--success);
+    }
+    
+    .alert-error {
+        background-color: #4d1a1a;
+        border-color: var(--error);
+    }
+    
+    .alert-info {
+        background-color: #1a2a4d;
+        border-color: var(--primary);
+    }
+}
+
+/* High Contrast Mode - Maximum contrast for accessibility */
+@media (prefers-contrast: high) {
+    :root {
+        /* Maximum contrast backgrounds and text */
+        --background: #000000;
+        --text: #ffffff;
+        --white: #000000;
+        --black: #ffffff;
+        
+        /* High contrast primary colors */
+        --primary: #ffff00;
+        --secondary: #00ffff;
+        --accent: #ff00ff;
+        
+        /* High contrast neutrals */
+        --neutral-light: #333333;
+        --neutral: #cccccc;
+        --neutral-dark: #ffffff;
+        
+        /* Maximum contrast status colors */
+        --success: #00ff00;
+        --error: #ff0000;
+        --warning: #ffff00;
+        
+        /* Stronger shadows */
+        --shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+    }
+    
+    /* Remove images transparency - full visibility */
+    img {
+        opacity: 1;
+        filter: contrast(1.2);
+    }
+    
+    /* Maximum contrast for cards */
+    .card {
+        background-color: #000000;
+        border: 2px solid #ffffff;
+    }
+    
+    /* High contrast buttons */
+    .btn {
+        border: 2px solid currentColor;
+        font-weight: 700;
+    }
+    
+    /* High contrast forms */
+    input,
+    select,
+    textarea {
+        border: 2px solid #ffffff;
+        background-color: #000000;
+        color: #ffffff;
+    }
+    
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: 3px solid #ffff00;
+        outline-offset: 2px;
+        border-color: #ffff00;
+    }
+    
+    /* High contrast alerts */
+    .alert {
+        border: 3px solid currentColor;
+        background-color: #000000;
+    }
+    
+    .alert-success {
+        color: #00ff00;
+        border-color: #00ff00;
+    }
+    
+    .alert-error {
+        color: #ff0000;
+        border-color: #ff0000;
+    }
+    
+    .alert-info {
+        color: #00ffff;
+        border-color: #00ffff;
+    }
+    
+    /* Maximum contrast links */
+    a {
+        color: #ffff00;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+    
+    a:hover,
+    a:focus {
+        color: #00ffff;
+        background-color: #333333;
+    }
+    
+    /* High contrast badges */
+    .badge {
+        border: 2px solid currentColor;
+        font-weight: 700;
+    }
+}
+

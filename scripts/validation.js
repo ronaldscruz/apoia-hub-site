@@ -58,6 +58,8 @@ const FormValidator = {
         const closeBtn = document.getElementById('close-modal');
         
         if (modal) {
+            const previouslyFocused = document.activeElement;
+            
             modal.classList.add('active');
             
             const closeModal = () => {
@@ -66,15 +68,50 @@ const FormValidator = {
                 if (typeof FormTypeSwitcher !== 'undefined') {
                     FormTypeSwitcher.hideAllSections();
                 }
+                
+                document.removeEventListener('keydown', handleEscape);
+                
+                if (previouslyFocused) {
+                    previouslyFocused.focus();
+                }
             };
             
+            const handleEscape = (e) => {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            };
+            
+            document.addEventListener('keydown', handleEscape);
+            
             if (closeBtn) {
-                closeBtn.addEventListener('click', closeModal);
+                closeBtn.addEventListener('click', closeModal, { once: true });
+                closeBtn.focus();
             }
             
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
                     closeModal();
+                }
+            });
+            
+            const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            const firstFocusable = focusableElements[0];
+            const lastFocusable = focusableElements[focusableElements.length - 1];
+            
+            modal.addEventListener('keydown', (e) => {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstFocusable) {
+                            e.preventDefault();
+                            lastFocusable.focus();
+                        }
+                    } else {
+                        if (document.activeElement === lastFocusable) {
+                            e.preventDefault();
+                            firstFocusable.focus();
+                        }
+                    }
                 }
             });
         }

@@ -14,15 +14,17 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
     <header>
         <div class="container flex justify-between items-center">
             <a href="index.html" class="logo-link">
                 <img src="assets/img/logo-transparent.png" alt="Apoia Hub - Conectando quem apoia com quem transforma" class="header-logo">
             </a>
 
-            <nav>
+            <nav aria-label="Navegação principal">
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle" class="menu-icon">
+                <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu de navegação">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -45,7 +47,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content" role="main">
         <!-- Introdução aos Projetos -->
         <section id="intro-projetos">
             <div class="container">
@@ -308,7 +310,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo" aria-label="Informações do rodapé">
         <div class="container">
         <p>&copy; 2025 Apoia Hub - Todos os direitos reservados.</p>
         <p>CNPJ: 12.345.678/0001-90</p>
